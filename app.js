@@ -37,6 +37,7 @@ function calculate() {
           <p>Стоимость для людей старше 70 лет: ${elderly * ticket_cost_without_discount}</p>
           <p>Количество людей старше 70 лет: ${elderly}</p>
       </div>
+      <button onclick="goBack()" class="back-button">Назад</button>
   `;
   showPopup('Результаты', popupContent);
 }
@@ -47,3 +48,7 @@ function showPopup(title, content) {
   popup.style.display = 'flex';
 }
 
+function goBack() {
+  let popup = document.getElementById('results');
+  popup.style.display = 'none';
+}
