@@ -1,21 +1,27 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Telegram Bot Counter</title>
-  <link rel="stylesheet" href="style.css">
-  <script src="app.js"></script>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Excursion Calculator</title>
+    <link rel="stylesheet" href="style.css">
 </head>
 <body>
-  <div class="container">
-    <h1>Telegram Bot Counter</h1>
-    <p>Введите параметры для подсчета участников:</p>
-    <input type="text" id="param1" placeholder="Параметр 1">
-    <input type="text" id="param2" placeholder="Параметр 2">
-    <button onclick="countMembers()">Посчитать</button>
-    <div id="result"></div>
-  </div>
-  <script src="script.js"></script>
+    <div class="container">
+        <h1>Excursion Calculator</h1>
+        <div class="input-container">
+            <input type="number" id="total_people" placeholder="Общее количество людей">
+            <input type="number" id="discounted_people" placeholder="Количество льготников">
+            <input type="number" id="children" placeholder="Количество детей">
+            <input type="number" id="elderly" placeholder="Количество людей старше 70 лет">
+            <input type="number" id="adult_excursion_cost" placeholder="Стоимость взрослой экскурсии">
+            <input type="number" id="children_excursion_cost" placeholder="Стоимость детской экскурсии">
+            <input type="number" id="discounted_excursion_cost" placeholder="Стоимость льготной экскурсии">
+        </div>
+        <button onclick="calculate()">Рассчитать</button>
+        <div id="results" class="popup"></div>
+    </div>
+    
+    <script src="script.js"></script>
 </body>
 </html>
