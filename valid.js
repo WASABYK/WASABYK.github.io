@@ -20,7 +20,7 @@ document.addEventListener('DOMContentLoaded', () => {
                 duration: 0.5, 
                 onComplete: () => {
                     history.replaceState(null, '', 'success.html');
-                    window.location.href = 'index.htm'; // Укажите здесь вашу страницу для перехода
+                    window.location.href = 'register.htm'; // Укажите здесь вашу страницу для перехода
                 } 
             });
         } else {
