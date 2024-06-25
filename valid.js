@@ -5,12 +5,6 @@ document.addEventListener('DOMContentLoaded', () => {
     const message = document.getElementById('message');
     const card = document.getElementById('card');
 
-    // Проверяем, была ли уже проверка почты
-    if (localStorage.getItem('emailVerified') === 'true') {
-        window.location.href = 'index.htm'; // Укажите здесь вашу основную страницу
-        return;
-    }
-
     let attempts = 3; // Количество попыток
 
     submitButton.addEventListener('click', () => {
@@ -25,9 +19,7 @@ document.addEventListener('DOMContentLoaded', () => {
                 y: 20, 
                 duration: 0.5, 
                 onComplete: () => {
-                    // Сохраняем информацию о проверке почты
-                    localStorage.setItem('emailVerified', 'true');
-                    history.replaceState(null, '', 'index.html');
+                    history.replaceState(null, '', 'success.html');
                     window.location.href = 'index.htm'; // Укажите здесь вашу страницу для перехода
                 } 
             });
