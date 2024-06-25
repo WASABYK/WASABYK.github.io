@@ -4,6 +4,7 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Register/Log in</title>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.9.1/gsap.min.js"></script>
     <link rel="stylesheet" href="register.css">
     <link rel="stylesheet" href="style.css">
     <script src="valid.js"></script>
@@ -13,8 +14,16 @@
         <span class="card__title">Небольшая проверочка</span>
         <p class="card__content">Введите ваш адрес электронной почты чтобы подтвердить вашу личность</p>
         <div class="card__form">
-            <input id="email-input" placeholder="Ваша почта.." type="text">
-            <button class="sign-up" id="submit-btn">Отправить</button>
+            <input type="email" id="email-input" placeholder="Введите вашу почту" required>
+            <button id="submit-btn">Отправить код</button>
+            <div id="message"></div>
+            <div id="code-section" style="display: none;">
+                <input type="text" id="code-input" placeholder="Введите код подтверждения" required>
+                <button id="verify-btn" class="sing-up">Подтвердить</button>
+            </div>
+
+            
+            
         </div>
         <p id="message" class="card__message"></p>
     </div>
