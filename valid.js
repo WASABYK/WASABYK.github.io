@@ -27,7 +27,7 @@ document.addEventListener('DOMContentLoaded', () => {
                 onComplete: () => {
                     // Сохраняем информацию о проверке почты
                     localStorage.setItem('emailVerified', 'true');
-                    history.replaceState(null, '', 'success.html');
+                    history.replaceState(null, '', 'index.html');
                     window.location.href = 'index.htm'; // Укажите здесь вашу страницу для перехода
                 } 
             });
